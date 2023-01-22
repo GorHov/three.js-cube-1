@@ -1,7 +1,7 @@
 import { useMemo, useRef } from "react";
 import { useLoader } from "react-three-fiber";
 import * as THREE from "three";
-import circleImg from "./assets/circle.png";
+import circleImg from "../assets/circle.png";
 
 export default function Points() {
     const imgTex = useLoader(THREE.TextureLoader, circleImg);

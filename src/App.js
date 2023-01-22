@@ -7,7 +7,7 @@ import {
   useThree,
 } from "react-three-fiber";
 import { Suspense, useMemo, useRef } from "react";
-import AnimationCanvas from "./AnimationCanvas";
+import AnimationCanvas from "./components/AnimationCanvas";
 
 
 function App() {

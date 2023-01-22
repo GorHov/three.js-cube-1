@@ -20,3 +20,6 @@ npm build
 ```
 
 Please note that this is a React project created with `create-react-app`.
+
+1) To change the position of the camera, double-click on the cube and rotate the mouse
+2) For Scale and Rotation please change numbers in inputs
