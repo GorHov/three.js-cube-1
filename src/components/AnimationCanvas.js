@@ -1,31 +1,10 @@
-import { folder, useControls } from "leva";
-import { Suspense, useRef, useState } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import { Suspense, useState } from "react";
+import { Canvas } from "react-three-fiber";
 import CameraControls from "./CameraControls";
 import Controls from "./Controls";
 import Points from "./Points";
 
-const MyMesh = ({position,scale}) => {
-    const refMesh = useRef();
-  console.log(refMesh);
-    useFrame(({ camera }) => {
-        // camera.position.x = position[0];
-        // camera.position.y = position[1];
-        // camera.position.z = position[2];
-        console.log('camera',camera);
-        // camera.fov = scale;
-        camera.updateProjectionMatrix();
-        // camera.rotation.x = 0;
-        // camera.rotation.y = 0;
-        // camera.rotation.z = 0;
-        console.log('pppppp',camera.rotation.x);
-        
-      });
-      //frame rotation
-    return (<mesh ref={refMesh} />);
-  }
-
-  const Cube = ({ position, rotation, scale = [1, 1, 1], handleClick }) => (
+  const Cube = ({ position, rotation, scale = [1, 1, 1] }) => (
     <group position={position} rotation={rotation} scale={scale}>
           <Points />
     </group>
@@ -43,7 +22,7 @@ export default function AnimationCanvas() {
 
     return (
       <>
-<Canvas colorManagement={false} camera={{ position: [800, 400, 0], fov: 75 ,}}>
+      <Canvas colorManagement={false} camera={{ position: [800, 400, 0], fov: 75 ,}}>
         <Suspense fallback={null}>
         <Cube
             rotation={[

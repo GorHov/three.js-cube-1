@@ -1,12 +1,5 @@
 import "./App.css";
-import {
-  Canvas,
-  extend,
-  useFrame,
-  useLoader,
-  useThree,
-} from "react-three-fiber";
-import { Suspense, useMemo, useRef } from "react";
+import { Suspense } from "react";
 import AnimationCanvas from "./components/AnimationCanvas";
 
 
